@@ -22,7 +22,7 @@ class LoginController extends Controller
     |
     */
 
-    
+
 
     /**
      * Where to redirect users after login.
@@ -45,7 +45,7 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
-    
+
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -55,7 +55,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             if (Auth::check()) {
-              
+
                 return redirect()->intended('/loan-details');
             }
         }
@@ -63,5 +63,10 @@ class LoginController extends Controller
         throw ValidationException::withMessages([
             'email' => __('auth.failed'),
         ]);
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
     }
 }

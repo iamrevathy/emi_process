@@ -18,6 +18,7 @@ Route::get('/', function () {
 })->name('home');
 
 Auth::routes();
+Route::group(['middleware' => 'auth'], function(){
 Route::get('/loan-details', 'LoanDetailsController@index')->name('loan-details');
 Route::get('/process-save', 'ProcessController@processData')->name('process.save');
 Route::get('/process-data', function () {
@@ -25,5 +26,4 @@ Route::get('/process-data', function () {
 })->name('process.data');
 
 
-
-
+});
