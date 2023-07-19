@@ -1,0 +1,47 @@
+/* public/css/custom.css */
+
+/* Custom styles for the table */
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.table-custom th,
+.table-custom td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.table-custom thead {
+  background-color: #f2f2f2;
+}
+
+.table-custom th {
+  font-weight: bold;
+}
+
+.table-custom tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.table-custom tbody tr:hover {
+  background-color: #e2e2e2;
+}
+.card {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.card-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-body p {
+  font-size: 16px;
+}
+
+
+/* Additional custom styles */
+/* ... Add your additional custom styles here ... */
